@@ -7,13 +7,9 @@ const WindowWidth = Dimensions.get('window').width;
 const WindowHeight = Dimensions.get('window').height;
 
 export default StyleSheet.create({
-  wrapper: { flex: 1,backgroundColor: 'white'},
- // avatarView: { marginTop: Platform.OS === "ios" ? 10 : 10,marginBottom: 5},
- 
   form_header: { justifyContent : 'center', flexDirection : 'row', },
-  header_text: {fontSize : normalizeFont(18) , fontWeight : 'bold' , paddingBottom : 8,marginLeft :15,marginRight :15},
+  header_text: {fontSize : normalizeFont(18) , fontWeight : 'bold' , paddingBottom : 8,marginLeft :15,marginRight :15,marginBottom:WindowHeight/10},
   underline: { borderBottomWidth :3, borderBottomColor: '#1584BD',color:"#1182BC"},
-  formView: {  marginTop: WindowHeight/9 },
   input: {
    width:'85%',
     borderRadius: 10,
@@ -22,7 +18,8 @@ export default StyleSheet.create({
     marginTop: 6,
     color: "black",
     fontWeight: "bold" ,
-    height:55
+    height:55,
+    
 },
 agreeText:{
   fontFamily:'Roboto', 

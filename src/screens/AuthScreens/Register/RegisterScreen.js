@@ -9,8 +9,18 @@ import {
   ActivityIndicator,
   KeyboardAvoidingView,
   Platform,
-  Image
+  Image,
+  TouchableWithoutFeedback,
+  Keyboard,
+  Dimensions
 } from 'react-native';
+
+
+import colors from '../../../assets/theme/colors';
+//import { primaryColor, secondaryColor, buttonColor } from '../../constants/Colors';
+import {normalizeFont} from '../../../helpers/FontSize/';
+const WindowWidth = Dimensions.get('window').width;
+const WindowHeight = Dimensions.get('window').height;
 import { Input,Text } from 'react-native-elements';
 import styles from './styles';
 import AvatarBox from '../../../components/AvatarBox/Avatar';
@@ -23,6 +33,10 @@ import LinearGradient from 'react-native-linear-gradient' // import LinearGradie
 import { CheckBox } from 'react-native-elements';
 import Container from '../../../components/Container/index';
 import {LOGIN_SCREEN } from '../../../constants/navgiationStrings';
+import {CREATE_PROFILE } from '../../../constants/navgiationStrings';
+
+import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view'
+// import Icon from 'react-native-vector-icons/FontAwesome';
 //import colors from '../../../assets/theme/colors';
 const schema = yup.object({
   email: yup.string().matches(/^\S*$/, 'Whitespace is not allowed').email().required(),
@@ -35,8 +49,7 @@ const schema = yup.object({
 
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import Icon from '../../../components/Icon/icons';
-
-export default function RegisterScreen ({navigation}) {
+const RegisterScreen = ({navigation}) => {
   const isFocused = useIsFocused();
   const [isLoading, setIsloading] = useState(false);
   const [check, setCheck] = useState(false);
@@ -58,21 +71,20 @@ export default function RegisterScreen ({navigation}) {
             title={title} checked={check}
             onPress={() => setCheck(!check)}
             checkedColor="#1182BC"
-           // style={{ marginLeft:20 }}
         />
     )
   }
 
 
   
-  const { control, handleSubmit, formState: { errors } } = useForm({
+  const { control, clearErrors, handleSubmit, formState: { errors } } = useForm({
     resolver: yupResolver(schema)
   });
 
 
-  // useEffect(() => {
-  //   clearErrors();
-  // }, [isFocused])
+  useEffect(() => {
+    clearErrors();
+  }, [isFocused])
 
 
   const onSubmit = async (data) => {
@@ -80,19 +92,7 @@ export default function RegisterScreen ({navigation}) {
     data.condition = check
     data.roles = role
 
-    
-    console.warn(data)
-    setIsloading(true);
-    // try {
-
-    //   await dispatch(authActions.signin(data));
-
-    // } catch (error) {
-     
-    //   setError(error.message);
-    // }
-
-    // setIsloading(false);
+   // setIsloading(true);
 
   }
 
@@ -102,16 +102,17 @@ export default function RegisterScreen ({navigation}) {
     }
   }, [error])
 
-    return (
-      <Container isLoading={isLoading}>
-     
-    <View  style={styles.wrapper}>
+ 
+  return (
+    <Container isLoading={isLoading}>
+    <KeyboardAvoidingView >
       
+      <View>
         <View style={styles.avatarView}>
-            <AvatarBox />
-          </View>
-          
-      <View >
+              <AvatarBox />
+            </View>
+   
+         
       <View style={styles.form_header}>
         <TouchableOpacity onPress={()=>{
           setUnder(false);
@@ -122,42 +123,39 @@ export default function RegisterScreen ({navigation}) {
        
         <Text style={[styles.header_text,styles.underline ]}>SIGN UP</Text>
         </View>
-
-        <View style={styles.formView}>
-          <View>
-            <Controller
-              control={control}
-              rules={{
-                required: true,
-              }}
-              render={({ field: { onChange, onBlur, value } }) => (
-                <Input
-                inputContainerStyle={{borderBottomWidth:0}}
-                containerStyle = {styles.input}
-                onBlur={onBlur}
-                onChangeText={onChange}
-                value={value}
-                placeholder='Email'
-                leftIcon={
-                  <Icon
-                  type='material'
-                    name='email'
-                    size={24}
-                    color='gray'
-                  
-                  />
-                }
-                />
+        
+        <View>
+          <Controller
+            control={control}
+            rules={{
+              required: true,
+            }}
+            render={({ field: { onChange, onBlur, value } }) => (
+              <Input
+              inputContainerStyle={{borderBottomWidth:0}}
+              containerStyle = {styles.input}
+              onBlur={onBlur}
+              onChangeText={onChange}
+              value={value}
+              placeholder='Email'
+              leftIcon={
+                <Icon
+                type='material'
+                  name='email'
+                  size={24}
+                  color='gray'
                 
-              )}
-              name="email"
-            />
-            
-            <TextErrorMessage error={errors?.email?.message} />
-          </View>
-
-          <View >
-          <View>
+                />
+              }
+              />
+              
+            )}
+            name="email"
+          />
+          
+          <TextErrorMessage error={errors?.email?.message} />
+        </View>
+        <View>
             <Controller
               control={control}
               rules={{
@@ -170,8 +168,7 @@ export default function RegisterScreen ({navigation}) {
                 onBlur={onBlur}
                 onChangeText={onChange}
                 value={value}
-            //    leftIconContainerStyle={{  backgroundColor: '#e5e5e5' , }}
-              
+             
                 placeholder='password'
                 leftIcon={
                   <Icon
@@ -190,9 +187,6 @@ export default function RegisterScreen ({navigation}) {
             
             <TextErrorMessage error={errors?.password?.message} />
           </View>
-          </View>
-
-          <View >
           <View>
             <Controller
               control={control}
@@ -203,13 +197,12 @@ export default function RegisterScreen ({navigation}) {
                 <Input
                 inputContainerStyle={{borderBottomWidth:0}}
                 containerStyle = {styles.input}
-                secureTextEntry={hidePass ? true : false}
                 onBlur={onBlur}
                 onChangeText={onChange}
                 value={value}
-            //    leftIconContainerStyle={{  backgroundColor: '#e5e5e5' , }}
+           // secureTextEntry={hidePass ? true : false}
               
-                placeholder='Confirm password'
+                placeholder='Confirm Password'
                 leftIcon={
                   <Icon
                   type='material'
@@ -218,12 +211,11 @@ export default function RegisterScreen ({navigation}) {
                     color='gray'
                   
                   />
-                  
                 }
-                
                 rightIcon={
                   <Icon
                   type='materialCommunity'
+            
                     name={hidePass?'eye-off':'eye'}
                     size={24}
                     color='gray'
@@ -239,42 +231,34 @@ export default function RegisterScreen ({navigation}) {
             
             <TextErrorMessage error={errors?.confirm_password?.message} />
           </View>
-          </View>
-        
-              <View > 
+          <View > 
               <View style={styles.footerText}>
              <View style={{width:'10%'}}>
               <RadioCheckbox check={check}  />
               {/* <Icon type="material"  name={selected2 ? "check-box" : "check-box-outline-blank"} size={18} color="#1182BC"/> */}
               </View>
               <Text style={styles.agreeText}>I agree with </Text>
-              <Text style={styles.privacyText}>Provicy Policy</Text>
+              <Text onPress={()=>{navigation.navigate(CREATE_PROFILE)}} style={styles.privacyText}>Provicy Policy</Text>
               </View>
               </View>
 
-  <View >
-   <TouchableOpacity onPress={handleSubmit(onSubmit)}>
+              <View >
+   
       <LinearGradient start={{ x: 0, y: 0 }} end={{ x: 1, y: 1 }} colors={['#bddae6', '#abd0e2', '#368dc2','#368dc2']  } style={styles.loginButton}>
+      <TouchableOpacity onPress={handleSubmit(onSubmit)}>
   <Text style={[styles.buttonText]}>SIGN UP</Text>
+  </TouchableOpacity>
         </LinearGradient>
 
-              </TouchableOpacity>
-
-            
-          </View>
-
-
-
-
-
-
-        </View>
-
-      </View>
+             
      
-    </View>
-   
-    </Container>
-    );
-  };
+          </View>
   
+  </View>
+    
+    </KeyboardAvoidingView>
+    </Container>
+  );
+};
+
+export default RegisterScreen;

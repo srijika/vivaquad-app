@@ -28,6 +28,7 @@ import AsyncStorage from '@react-native-async-storage/async-storage';
 import Icon from '../../../components/Icon/icons';
 
 
+
 const schema = yup.object({
   email: yup.string().matches(/^\S*$/, 'Whitespace is not allowed').email().required(),
   password: yup.string()
@@ -104,6 +105,7 @@ if(!selected2){
 
     return (
       <Container isLoading={isLoading}>   
+       <KeyboardAvoidingView >
       <View  style={styles.wrapper}>
         <View>
             <AvatarBox />
@@ -215,8 +217,9 @@ if(!selected2){
                 onBlur={onBlur}
                 onChangeText={onChange}
                 value={value}
-            //    leftIconContainerStyle={{  backgroundColor: '#e5e5e5' , }}
-              
+         //     secureTextEntry={hidePass ? true : false}
+         //   autoCapitalize={'none'}
+       
                 placeholder='password'
                 leftIcon={
                   <Icon
@@ -254,14 +257,18 @@ if(!selected2){
           </View>
 
   <View >
-   <TouchableOpacity onPress={
    
-     handleSubmit(onSubmit)}>
       <LinearGradient start={{ x: 0, y: 0 }} end={{ x: 1, y: 1 }} colors={['#bddae6', '#abd0e2', '#368dc2','#368dc2']  } style={styles.loginButton}>
+      <TouchableOpacity onPress={
+   
+   handleSubmit(onSubmit)
+   
+   }>
   <Text style={[styles.buttonText]}>Login</Text>
+  </TouchableOpacity>
         </LinearGradient>
 
-              </TouchableOpacity>
+              
 
             
           </View>
@@ -276,7 +283,7 @@ if(!selected2){
       </View>
      
     </View>
-    
+    </KeyboardAvoidingView>
     </Container>
     );
   };

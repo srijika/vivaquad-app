@@ -1,16 +1,3 @@
-// import React,{useState,useEffect} from 'react';
-
-// import {View,ScrollView} from 'react-native'
-// import {Text,input} from 'react-native-elements'
-// import styles from './styles';
-// import AvatarBox from '../../../components/AvatarBox/Avatar';
-// import { useIsFocused } from '@react-navigation/native';
-// import { useForm, Controller } from "react-hook-form";
-// import { yupResolver } from '@hookform/resolvers/yup';
-// import * as yup from "yup";
-// import TextErrorMessage from '../../../components/ErrorMessage/Error';
-// import LinearGradient from 'react-native-linear-gradient' 
- import {FORGOT_PASSWORD } from '../../../constants/navgiationStrings';
 
 import React, { useState, useEffect } from 'react';
 import {
@@ -36,6 +23,7 @@ import TextErrorMessage from '../../../components/ErrorMessage/Error';
 import LinearGradient from 'react-native-linear-gradient' // import LinearGradient
 import { CheckBox } from 'react-native-elements';
 import Container from '../../../components/Container/index';
+import ArrowBack from '../../../components/ArrowBack/ArrowBack';
 import {OTP_SCREEN } from '../../../constants/navgiationStrings';
 //import colors from '../../../assets/theme/colors';
 const schema = yup.object({
@@ -98,6 +86,7 @@ export default function ForgotPasswordScreen ({navigation}) {
       <Container isLoading={isLoading}>
       
     <View  style={styles.wrapper}>
+      <ArrowBack />
         <View >
             <AvatarBox />
           </View>
@@ -161,12 +150,14 @@ export default function ForgotPasswordScreen ({navigation}) {
           </View>
 
   <View >
-   <TouchableOpacity onPress={handleSubmit(onSubmit)}>
+   
       <LinearGradient start={{ x: 0, y: 0 }} end={{ x: 1, y: 1 }} colors={['#bddae6', '#abd0e2', '#368dc2','#368dc2']  } style={styles.loginButton}>
+      <TouchableOpacity onPress={handleSubmit(onSubmit)}>
   <Text style={[styles.buttonText]}>Send Link</Text>
+
+  </TouchableOpacity>
         </LinearGradient>
 
-              </TouchableOpacity>
 
             
           </View>

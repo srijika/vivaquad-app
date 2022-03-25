@@ -1,58 +1,58 @@
 [
     {
-        "merged": "/var/www/html/project/vivaquad/app/vivaquad-app/android/app/build/intermediates/res/merged/debug/drawable_launch_screen.png.flat",
-        "source": "/var/www/html/project/vivaquad/app/vivaquad-app/android/app/src/main/res/drawable/launch_screen.png"
+        "merged": "/var/www/html/plenum Project/vivaquad-app/android/app/build/intermediates/res/merged/debug/layout_launch_screen.xml.flat",
+        "source": "/var/www/html/plenum Project/vivaquad-app/android/app/src/main/res/layout/launch_screen.xml"
     },
     {
-        "merged": "/var/www/html/project/vivaquad/app/vivaquad-app/android/app/build/intermediates/res/merged/debug/mipmap-hdpi_ic_launcher_round.png.flat",
-        "source": "/var/www/html/project/vivaquad/app/vivaquad-app/android/app/src/main/res/mipmap-hdpi/ic_launcher_round.png"
+        "merged": "/var/www/html/plenum Project/vivaquad-app/android/app/build/intermediates/res/merged/debug/mipmap-mdpi_ic_launcher_round.png.flat",
+        "source": "/var/www/html/plenum Project/vivaquad-app/android/app/src/main/res/mipmap-mdpi/ic_launcher_round.png"
     },
     {
-        "merged": "/var/www/html/project/vivaquad/app/vivaquad-app/android/app/build/intermediates/res/merged/debug/mipmap-xxhdpi_ic_launcher_round.png.flat",
-        "source": "/var/www/html/project/vivaquad/app/vivaquad-app/android/app/src/main/res/mipmap-xxhdpi/ic_launcher_round.png"
+        "merged": "/var/www/html/plenum Project/vivaquad-app/android/app/build/intermediates/res/merged/debug/mipmap-xxxhdpi_ic_launcher_round.png.flat",
+        "source": "/var/www/html/plenum Project/vivaquad-app/android/app/src/main/res/mipmap-xxxhdpi/ic_launcher_round.png"
     },
     {
-        "merged": "/var/www/html/project/vivaquad/app/vivaquad-app/android/app/build/intermediates/res/merged/debug/mipmap-xxhdpi_ic_launcher.png.flat",
-        "source": "/var/www/html/project/vivaquad/app/vivaquad-app/android/app/src/main/res/mipmap-xxhdpi/ic_launcher.png"
+        "merged": "/var/www/html/plenum Project/vivaquad-app/android/app/build/intermediates/res/merged/debug/mipmap-hdpi_ic_launcher.png.flat",
+        "source": "/var/www/html/plenum Project/vivaquad-app/android/app/src/main/res/mipmap-hdpi/ic_launcher.png"
     },
     {
-        "merged": "/var/www/html/project/vivaquad/app/vivaquad-app/android/app/build/intermediates/res/merged/debug/mipmap-xxxhdpi_ic_launcher_round.png.flat",
-        "source": "/var/www/html/project/vivaquad/app/vivaquad-app/android/app/src/main/res/mipmap-xxxhdpi/ic_launcher_round.png"
+        "merged": "/var/www/html/plenum Project/vivaquad-app/android/app/build/intermediates/res/merged/debug/mipmap-xxhdpi_ic_launcher.png.flat",
+        "source": "/var/www/html/plenum Project/vivaquad-app/android/app/src/main/res/mipmap-xxhdpi/ic_launcher.png"
     },
     {
-        "merged": "/var/www/html/project/vivaquad/app/vivaquad-app/android/app/build/intermediates/res/merged/debug/layout_launch_screen.xml.flat",
-        "source": "/var/www/html/project/vivaquad/app/vivaquad-app/android/app/src/main/res/layout/launch_screen.xml"
+        "merged": "/var/www/html/plenum Project/vivaquad-app/android/app/build/intermediates/res/merged/debug/mipmap-xhdpi_ic_launcher.png.flat",
+        "source": "/var/www/html/plenum Project/vivaquad-app/android/app/src/main/res/mipmap-xhdpi/ic_launcher.png"
     },
     {
-        "merged": "/var/www/html/project/vivaquad/app/vivaquad-app/android/app/build/intermediates/res/merged/debug/drawable_rn_edit_text_material.xml.flat",
-        "source": "/var/www/html/project/vivaquad/app/vivaquad-app/android/app/src/main/res/drawable/rn_edit_text_material.xml"
+        "merged": "/var/www/html/plenum Project/vivaquad-app/android/app/build/intermediates/res/merged/debug/drawable_launch_screen.png.flat",
+        "source": "/var/www/html/plenum Project/vivaquad-app/android/app/src/main/res/drawable/launch_screen.png"
     },
     {
-        "merged": "/var/www/html/project/vivaquad/app/vivaquad-app/android/app/build/intermediates/res/merged/debug/mipmap-xxxhdpi_ic_launcher.png.flat",
-        "source": "/var/www/html/project/vivaquad/app/vivaquad-app/android/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png"
+        "merged": "/var/www/html/plenum Project/vivaquad-app/android/app/build/intermediates/res/merged/debug/mipmap-xhdpi_ic_launcher_round.png.flat",
+        "source": "/var/www/html/plenum Project/vivaquad-app/android/app/src/main/res/mipmap-xhdpi/ic_launcher_round.png"
     },
     {
-        "merged": "/var/www/html/project/vivaquad/app/vivaquad-app/android/app/build/intermediates/res/merged/debug/mipmap-mdpi_ic_launcher_round.png.flat",
-        "source": "/var/www/html/project/vivaquad/app/vivaquad-app/android/app/src/main/res/mipmap-mdpi/ic_launcher_round.png"
+        "merged": "/var/www/html/plenum Project/vivaquad-app/android/app/build/intermediates/res/merged/debug/mipmap-hdpi_ic_launcher_round.png.flat",
+        "source": "/var/www/html/plenum Project/vivaquad-app/android/app/src/main/res/mipmap-hdpi/ic_launcher_round.png"
     },
     {
-        "merged": "/var/www/html/project/vivaquad/app/vivaquad-app/android/app/build/intermediates/res/merged/debug/mipmap-hdpi_ic_launcher.png.flat",
-        "source": "/var/www/html/project/vivaquad/app/vivaquad-app/android/app/src/main/res/mipmap-hdpi/ic_launcher.png"
+        "merged": "/var/www/html/plenum Project/vivaquad-app/android/app/build/intermediates/res/merged/debug/mipmap-mdpi_ic_launcher.png.flat",
+        "source": "/var/www/html/plenum Project/vivaquad-app/android/app/src/main/res/mipmap-mdpi/ic_launcher.png"
     },
     {
-        "merged": "/var/www/html/project/vivaquad/app/vivaquad-app/android/app/build/intermediates/res/merged/debug/mipmap-xhdpi_ic_launcher.png.flat",
-        "source": "/var/www/html/project/vivaquad/app/vivaquad-app/android/app/src/main/res/mipmap-xhdpi/ic_launcher.png"
+        "merged": "/var/www/html/plenum Project/vivaquad-app/android/app/build/intermediates/res/merged/debug/drawable_rn_edit_text_material.xml.flat",
+        "source": "/var/www/html/plenum Project/vivaquad-app/android/app/src/main/res/drawable/rn_edit_text_material.xml"
     },
     {
-        "merged": "/var/www/html/project/vivaquad/app/vivaquad-app/android/app/build/intermediates/res/merged/debug/mipmap-xhdpi_ic_launcher_round.png.flat",
-        "source": "/var/www/html/project/vivaquad/app/vivaquad-app/android/app/src/main/res/mipmap-xhdpi/ic_launcher_round.png"
+        "merged": "/var/www/html/plenum Project/vivaquad-app/android/app/build/intermediates/res/merged/debug/mipmap-xxxhdpi_ic_launcher.png.flat",
+        "source": "/var/www/html/plenum Project/vivaquad-app/android/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png"
     },
     {
-        "merged": "/var/www/html/project/vivaquad/app/vivaquad-app/android/app/build/intermediates/res/merged/debug/mipmap-mdpi_ic_launcher.png.flat",
-        "source": "/var/www/html/project/vivaquad/app/vivaquad-app/android/app/src/main/res/mipmap-mdpi/ic_launcher.png"
+        "merged": "/var/www/html/plenum Project/vivaquad-app/android/app/build/intermediates/res/merged/debug/mipmap-xxhdpi_ic_launcher_round.png.flat",
+        "source": "/var/www/html/plenum Project/vivaquad-app/android/app/src/main/res/mipmap-xxhdpi/ic_launcher_round.png"
     },
     {
-        "merged": "/var/www/html/project/vivaquad/app/vivaquad-app/android/app/build/intermediates/res/merged/debug/drawable_launch_screen1.png.flat",
-        "source": "/var/www/html/project/vivaquad/app/vivaquad-app/android/app/src/main/res/drawable/launch_screen1.png"
+        "merged": "/var/www/html/plenum Project/vivaquad-app/android/app/build/intermediates/res/merged/debug/drawable_launch_screen1.png.flat",
+        "source": "/var/www/html/plenum Project/vivaquad-app/android/app/src/main/res/drawable/launch_screen1.png"
     }
 ]

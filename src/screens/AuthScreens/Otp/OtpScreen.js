@@ -10,7 +10,7 @@
 // import * as yup from "yup";
 // import TextErrorMessage from '../../../components/ErrorMessage/Error';
 // import LinearGradient from 'react-native-linear-gradient' 
-import {FORGOT_PASSWORD } from '../../../constants/navgiationStrings';
+import {RESET_PASSWORD } from '../../../constants/navgiationStrings';
 
 import React, { useState, useEffect } from 'react';
 import {
@@ -43,6 +43,7 @@ const WindowWidth = Dimensions.get('window').width;
 const WindowHeight = Dimensions.get('window').height;
 import {normalizeFont} from '../../../helpers/FontSize/';
 import OTPInputView from '@twotalltotems/react-native-otp-input';
+import ArrowBack from '../../../components/ArrowBack/ArrowBack';
 //import colors from '../../../assets/theme/colors';
 
 import AsyncStorage from '@react-native-async-storage/async-storage';
@@ -95,6 +96,7 @@ export default function OtpScreen ({navigation}) {
       <Container isLoading={isLoading}>
       
     <View  style={styles.wrapper}>
+      <ArrowBack/>
         <View >
             <AvatarBox />
           </View>
@@ -158,14 +160,16 @@ export default function OtpScreen ({navigation}) {
           
           <View>
   
-            <TouchableOpacity
-             
-              onPress={() => handleCode()} 
-            >
+      
               <LinearGradient start={{ x: 0, y: 0 }} end={{ x: 1, y: 1 }} colors={['#bddae6', '#abd0e2', '#368dc2','#368dc2']  } style={styles.loginButton}>
+              <TouchableOpacity
+             //onPress={() => handleCode()} 
+             onPress={() =>navigation.navigate(RESET_PASSWORD)}
+           >
   <Text style={[styles.buttonText]}>Continue</Text>
+  </TouchableOpacity>
   </LinearGradient>
-            </TouchableOpacity>
+           
         
         </View>
 

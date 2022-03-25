@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "/var/www/html/project/vivaquad/app/vivaquad-app/android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-w360dp-port-v13/values-w360dp-port-v13.xml",
+            "outputFile": "/var/www/html/plenum Project/vivaquad-app/android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-w360dp-port-v13/values-w360dp-port-v13.xml",
             "map": [
                 {
-                    "source": "/home/developer/.gradle/caches/transforms-3/7c0c7e113c074df493b9385345dc4b6b/transformed/material-1.1.0/res/values-w360dp-port-v13/values-w360dp-port-v13.xml",
+                    "source": "/home/react-developer/.gradle/caches/transforms-3/7c0c7e113c074df493b9385345dc4b6b/transformed/material-1.1.0/res/values-w360dp-port-v13/values-w360dp-port-v13.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9",
                         "startColumns": "4,4,4,4,4,4,4,4",
